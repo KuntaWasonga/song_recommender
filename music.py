@@ -13,7 +13,8 @@ def relevant_data(track, response):
     return data
 
 def top5songs(emotion):
-    api_url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag={}&limit={}&api_key={}&format=json".format(emotion, limit, apikey)
+    api_url = "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks& \
+        tag={}&limit={}&api_key={}&format=json".format(emotion, limit, apikey)
     response = requests.get(api_url)
     if response.status_code == 200:
         response.json()
@@ -22,7 +23,8 @@ def top5songs(emotion):
         
                 
 def similar_songs(name,artist):
-    api_url = "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist={}&track={}&limit={}&api_key={}&format=json".format(artist, name, limit, apikey)
+    api_url = "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar& \
+        artist={}&track={}&limit={}&api_key={}&format=json".format(artist, name, limit, apikey)
     response = requests.get(api_url)
     if response.status_code == 200:
         response.json()
