@@ -2,10 +2,9 @@ import requests
 
 apikey= "11ba2baedecba73d61d2d6563c2f1c3a"
 limit = 5
-song = [dict() for i in range(5)]
 
 def relevant_data(track, response):
-    data = [dict() for i in range(5)]
+    data = [dict() for i in range(limit)]
     for i in range(limit):
         responses = response[track]["track"][0]
         data[i]['name'] = responses['name']
@@ -29,13 +28,3 @@ def similar_songs(name,artist):
         response.json()
         songs = relevant_data("similartracks", response)
         return songs
-    
-        
-        
-            
-        
-        
-        
-#obtain each track
-#in each track obtain data for (name, artist and url)
-#return this data in dictionary form
