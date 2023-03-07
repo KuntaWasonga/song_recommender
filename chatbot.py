@@ -30,9 +30,9 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route("/search", methods=['POST', 'GET'])
+def search():
+    return render_template('search.html', title='Search')
 
 @app.route('/bot', methods=['POST'])
 def bot():
