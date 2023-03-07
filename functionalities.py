@@ -7,6 +7,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
+lemmatizer = WordNetLemmatizer()
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
