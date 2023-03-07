@@ -29,12 +29,14 @@ for intent in intents['intents']:
             
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
 words = sorted(set(words))
-
+#ensure no duplicates
 classes = sorted(set(classes))
 
+#save into files
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(words, open('classes.pkl', 'wb'))
 
+#creating numerical values for words to be fed to neural network
 training = []
 output_empty = [0] * len(classes)
 
