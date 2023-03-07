@@ -1,5 +1,23 @@
 {"intents" : [
     {"tag" : "greetings",
     "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "goodbye",
+    "patterns" : ["see ya", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "music",
+    "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "name",
+    "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "bad",
+    "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "good",
+    "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
+    "responses" : ["hello!", "hey!", "what can I do for you?"]},
+    {"tag" : "",
+    "patterns" : ["hello", "hey", "hi", "what's up?", "how's it going?"],
     "responses" : ["hello!", "hey!", "what can I do for you?"]}
 ]}
