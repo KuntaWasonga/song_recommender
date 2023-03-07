@@ -34,7 +34,7 @@ classes = sorted(set(classes))
 
 #save into files
 pickle.dump(words, open('words.pkl', 'wb'))
-pickle.dump(words, open('classes.pkl', 'wb'))
+pickle.dump(classes, open('classes.pkl', 'wb'))
 
 #creating numerical values for words to be fed to neural network
 training = []
@@ -72,5 +72,5 @@ sgd = SGD(lr= 0.01, decay = 1e-6, momentum = 0.9, nesterov = True)
 model.compile(loss='categorical_crossentropy', optimizer = sgd, metrics = ['accuracy'] )
 
 #how to feed data into neural network
-model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, versbose = 1)
-model.save('chatbot_model.model')
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, versbose = 1)
+model.save('chatbotmodel.h5', hist)
