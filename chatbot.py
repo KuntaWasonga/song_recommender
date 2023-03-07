@@ -30,16 +30,17 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
+
 @app.route("/search", methods=['POST', 'GET'])
 def search():
     return render_template('search.html', title='Search')
+
 
 @app.route('/bot', methods=['POST'])
 def bot():
     user_msg = request.values.get('Body', '').lower()
     bot_resp = MessagingResponse()
     msg = bot_resp.message()
-    
     
     return str(bot_resp)
 
