@@ -51,5 +51,18 @@ def chatbot_response():
         res = getResponse(ints, intents)
     return res
 
+def predict_class(sentence):
+    #filter out predictions below a threshold
+    bow = bag_of_words(sentence)
+    res = model.predict(np.array([bow]))[0]
+    ERROR_THRESHOLD = 0.25
+    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
+    # sort in descending order of probability
+    results.sort(key = lambda x: x[1], reverse = True)
+    return_list = []
+    for r in results:
+        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+    return return_list
+
 if __name__ == '__main__':
     app.run(debug=True)
