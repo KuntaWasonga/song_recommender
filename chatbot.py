@@ -1,11 +1,11 @@
-import random
 import json
 import pickle
 import numpy as np
 
 import nltk
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+from keras.models import load_model
 
 from flask import Flask, request, render_template, url_for
 import requests
@@ -29,11 +29,6 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
-
-
-@app.route("/search", methods=['POST', 'GET'])
-def search():
-    return render_template('search.html', title='Search')
 
 
 @app.route('/bot', methods=['POST'])
