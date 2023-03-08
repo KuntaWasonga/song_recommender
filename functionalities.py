@@ -1,4 +1,5 @@
 import random
+import pickle
 import numpy as np
 
 import nltk
@@ -26,20 +27,6 @@ def bag_of_words(sentence, words, show_details=True):
                 #assign 1 if current word is in the vocabulary position
                 bag[i] = 1
     return np.array(bag)
-
-
-def predict_class(sentence):
-    #filter out predictions below a threshold
-    bow = bag_of_words(sentence)
-    res = model.predict(np.array([bow]))[0]
-    ERROR_THRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
-    # sort in descending order of probability
-    results.sort(key = lambda x: x[1], reverse = True)
-    return_list = []
-    for r in results:
-        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-    return return_list
 
 
 def getResponse(ints, intents_json):
