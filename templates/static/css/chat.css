@@ -1,8 +1,9 @@
-/* Ensures chatbox is fixed at bottom towards right */
+/* Ensures chatbox is fixed at bottom towards center */
 .chat-bar-collapsible {
     position: fixed;
+    margin: 0 auto;
     bottom: 0;
-    right: 50px;
+    right: 500px; 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -22,12 +23,12 @@
 }
 
 /* Hides chatbot */
-.content {
+/*.content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
-}
+}*/
 
 /* Shows full chatblock displayed*/
 .full-chat-block {
@@ -89,6 +90,7 @@
 /* pseudo element for when user hovers over icon */
 #chat-icon:hover {
     opacity: .7;
+    cursor: pointer;
 }
 
 /* Chat bubbles */
@@ -110,7 +112,6 @@
     background-color: white;
     outline: none;
 }
-
 
 /*Handles display of user text in chat*/
 .userText {
