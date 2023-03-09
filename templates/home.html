@@ -1,9 +1,91 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chat Bot</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/chat.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Chat bar block-->
+        <div class="chat-bar-collapsible">
+            <button id="chat-button" type="button" class="collapsible"> Chat with us!
+                <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+            </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message container-->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!--Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input_box" type="text" name"msg"
+                            placeholder="Tap "Enter" to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                            onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                            onclick="sendButton()"></i>
+                        </div>
+                </div>
+
+                <div id="chat-bar-bottom">
+                    <p></p>
+                </div>
+
+            </div>        
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="static/scripts/responses.js"></script>
+    <script src="static/scripts/chat.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
-    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -59,38 +141,5 @@
 </body>
 
 </html>
-
-
-
-<!--
-<h2>Weekly Coding Challenge #8 <br /> Chat Interface</h2>
-<div class="chat-container">
-	<ul class="chat">
-		<li class="message left">
-			<img class="logo" src="https://randomuser.me/api/portraits/women/17.jpg" alt="">
-			<p>I'm hungry!</p>
-		</li>
-		<li class="message right">
-			<img class="logo" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
-			<p>Hi hungry, nice to meet you. I'm Dad.</p>
-		</li>
-		<li class="message left">
-			<img class="logo" src="https://randomuser.me/api/portraits/women/17.jpg" alt="">
-			<p>DAD! I'm serious!</p>
-		</li>
-		<li class="message right">
-			<img class="logo" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
-			<p>I thought your name was hungry...?</p>
-		</li>
-		<li class="message left">
-			<img class="logo" src="https://randomuser.me/api/portraits/women/17.jpg" alt="">
-			<p>ARE YOU KIDDING ME?</p>
-		</li>
-		<li class="message right">
-			<img class="logo" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
-			<p>No, I'm Dad...</p>
-		</li>
-	</ul>
-	<input type="text" class="text_input" placeholder="Message..."/>
-</div>
 -->
+
