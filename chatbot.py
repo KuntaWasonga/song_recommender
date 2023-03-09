@@ -13,10 +13,10 @@ import requests
 from functionalities import *
 
 # chat initialization
-model = load_model("chatbotmodel.h5")
+'''model = load_model("chatbotmodel.h5")
 intents = json.loads(open("intents.json").read())
 words = pickle.load(open("words.pkl", "rb"))
-classes = pickle.load(open("classes.pkl", "rb"))
+classes = pickle.load(open("classes.pkl", "rb"))'''
 
 app = Flask(__name__)
 
