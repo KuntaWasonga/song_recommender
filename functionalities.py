@@ -8,7 +8,7 @@ def load_json(file):
         print(f"Loaded '{file}' successfully!")
         return json.load(bot_responses)
     
-responses_data = load_json('intents.json')
+response_data = load_json('intents.json')
 
 
 def get_response(input_string):
