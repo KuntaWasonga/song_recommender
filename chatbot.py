@@ -30,7 +30,7 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
-
+'''
 @app.route('/bot', methods=['POST'])
 def chatbot_response():
     msg = request.form["msg"]
@@ -62,7 +62,7 @@ def predict_class(sentence):
     return_list = []
     for r in results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-    return return_list
+    return return_list'''
 
 if __name__ == '__main__':
     app.run(debug=True)
