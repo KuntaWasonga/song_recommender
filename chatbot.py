@@ -1,22 +1,8 @@
-import json
-import pickle
-import numpy as np
-
-import nltk
-from nltk.stem import WordNetLemmatizer
-from tensorflow import keras
-from keras.models import load_model
-
 from flask import Flask, request, render_template, url_for
 import requests
 
 from functionalities import *
 
-# chat initialization
-'''model = load_model("chatbotmodel.h5")
-intents = json.loads(open("intents.json").read())
-words = pickle.load(open("words.pkl", "rb"))
-classes = pickle.load(open("classes.pkl", "rb"))'''
 
 app = Flask(__name__)
 
