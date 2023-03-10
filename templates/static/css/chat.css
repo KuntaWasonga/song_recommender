@@ -1,13 +1,10 @@
-/* Ensures chatbox is fixed at bottom towards center */
 .chat-bar-collapsible {
     position: fixed;
-    margin: 0 auto;
     bottom: 0;
-    right: 500px; 
+    right: 500px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Ensures button is clickable element */
 .collapsible {
     background-color: rgb(82, 151, 255);
     color: white;
@@ -22,7 +19,6 @@
     border-bottom: none;
 }
 
-/* Hides chatbot */
 .content {
     max-height: 0;
     overflow: hidden;
@@ -30,7 +26,6 @@
     background-color: #f1f1f1;
 }
 
-/* Shows full chatblock displayed*/
 .full-chat-block {
     width: 350px;
     background: white;
@@ -41,14 +36,12 @@
     transition: max-height 0.2s ease-out;
 }
 
-/* Takes care of outer chatbox heightwise */
 .outer-container {
     min-height: 500px;
     bottom: 0%;
     position: relative;
 }
 
-/* Takes care of the messages ensuring max height */
 .chat-container {
     max-height: 500px;
     width: 100%;
@@ -59,25 +52,22 @@
     hyphens: auto;
 }
 
-/* Pseudo element for scroll bar */
 .chat-container::-webkit-scrollbar {
     display: none;
 }
 
-/* Bottom where user inputs message */
 .chat-bar-input-block {
-    display: flex;      /* ensures all items are evenly distributed */
+    display: flex;
     float: left;
     box-sizing: border-box;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(216, 213, 213);
+    background-color: rgb(235, 235, 235);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
 
-/* Takes care of the chat bar icons */
 .chat-bar-icons {
     display: flex;
     justify-content: space-evenly;
@@ -87,10 +77,8 @@
     font-size: 20px;
 }
 
-/* pseudo element for when user hovers over icon */
 #chat-icon:hover {
     opacity: .7;
-    cursor: pointer;
 }
 
 /* Chat bubbles */
@@ -99,7 +87,6 @@
     width: 75%;
 }
 
-/* Takes care of the input box element */
 .input-box {
     float: left;
     border: none;
@@ -110,10 +97,9 @@
     font-size: 16px;
     color: #000;
     background-color: white;
-    outline: none;
+    outline: none
 }
 
-/*Handles display of user text in chat*/
 .userText {
     color: white;
     font-family: Helvetica;
@@ -135,7 +121,6 @@
     animation: floatup .5s forwards
 }
 
-/* Handles bot messages */
 .botText {
     color: #000;
     font-family: Helvetica;
@@ -156,7 +141,6 @@
     animation: floatup .5s forwards
 }
 
-/* Custom animation */
 @keyframes floatup {
     from {
         transform: translateY(14px);
@@ -168,7 +152,6 @@
     }
 }
 
-/*When the screen size is phone size*/
 @media screen and (max-width:600px) {
     .full-chat-block {
         width: 100%;
